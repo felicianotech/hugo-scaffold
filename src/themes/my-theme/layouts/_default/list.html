@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main class="list">
+	<h1>{{ .Title }}</h1>
+	{{ range sort .Site.Pages }}
+		<div class="content-item">
+			<h2>{{ .Title }}</h2>
+			<p class="content-body">
+				{{ .Content }}
+			</p>
+		</div>
+	{{ end }}
+</main>
+{{ end }}
